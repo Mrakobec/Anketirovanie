@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.anketirovanie.web.answer.AnswerEdit"
+        datasource="answerDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.anketirovanie.web.answer">
+    <dsContext>
+        <datasource id="answerDs"
+                    class="com.company.anketirovanie.entity.Answer"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="answerDs">
+            <column width="250px">
+                <field property="answer"/>
+                <field property="true_false"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="anketirovanie"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>com.company.anketirovanie.entity.Answer</class>
+        <class>com.company.anketirovanie.entity.Question</class>
+        <class>com.company.anketirovanie.entity.Questionnaire</class>
+    </persistence-unit>
+</persistence>

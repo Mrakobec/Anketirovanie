@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="anketirovanie$Answer.browse"
+            template="com/company/anketirovanie/web/answer/answer-browse.xml"/>
+    <screen id="anketirovanie$Answer.edit"
+            template="com/company/anketirovanie/web/answer/answer-edit.xml"/>
+    <screen id="anketirovanie$Question.browse"
+            template="com/company/anketirovanie/web/question/question-browse.xml"/>
+    <screen id="anketirovanie$Question.edit"
+            template="com/company/anketirovanie/web/question/question-edit.xml"/>
+    <screen id="anketirovanie$Questionnaire.browse"
+            template="com/company/anketirovanie/web/questionnaire/questionnaire-browse.xml"/>
+    <screen id="anketirovanie$Questionnaire.edit"
+            template="com/company/anketirovanie/web/questionnaire/questionnaire-edit.xml"/>
+</screen-config>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.anketirovanie.web.questionnaire.QuestionnaireEdit"
+        datasource="questionnaireDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.anketirovanie.web.questionnaire">
+    <dsContext>
+        <datasource id="questionnaireDs"
+                    class="com.company.anketirovanie.entity.Questionnaire"
+                    view="questionnaire-view">
+            <collectionDatasource id="questionDs"
+                                  property="question"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="questionnaireDs">
+            <column width="250px">
+                <field property="questionnaire"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="questionBox"
+                  caption="msg://com.company.anketirovanie.entity/Questionnaire.question">
+            <table id="questionTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="add"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="question"/>
+                    <column id="qutype"/>
+                </columns>
+                <rows datasource="questionDs"/>
+                <buttonsPanel>
+                    <button action="questionTable.add"/>
+                    <button action="questionTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

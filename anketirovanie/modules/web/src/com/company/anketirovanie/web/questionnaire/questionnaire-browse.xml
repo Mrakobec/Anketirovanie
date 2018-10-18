@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.anketirovanie.web.questionnaire.QuestionnaireBrowse"
+        focusComponent="questionnairesTable"
+        lookupComponent="questionnairesTable"
+        messagesPack="com.company.anketirovanie.web.questionnaire">
+    <dsContext>
+        <groupDatasource id="questionnairesDs"
+                         class="com.company.anketirovanie.entity.Questionnaire"
+                         view="questionnaire-view">
+            <query>
+                <![CDATA[select e from anketirovanie$Questionnaire e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="questionnairesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="questionnairesTable"
+                datasource="questionnairesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="questionnairesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="questionnaire"/>
+            </columns>
+            <rows datasource="questionnairesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="questionnairesTable.create"/>
+                <button id="editBtn"
+                        action="questionnairesTable.edit"/>
+                <button id="removeBtn"
+                        action="questionnairesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
