@@ -32,7 +32,6 @@
             </actions>
             <columns>
                 <column id="answer"/>
-                <column id="true_false"/>
             </columns>
             <rows datasource="answersDs"/>
             <rowsCount/>

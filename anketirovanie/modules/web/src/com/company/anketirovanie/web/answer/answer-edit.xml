@@ -18,7 +18,6 @@
                     datasource="answerDs">
             <column width="250px">
                 <field property="answer"/>
-                <field property="true_false"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

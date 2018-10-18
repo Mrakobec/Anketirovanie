@@ -17,17 +17,6 @@ public class Answer extends StandardEntity {
     @Column(name = "ANSWER", nullable = false, unique = true)
     protected String answer;
 
-    @Column(name = "TRUE_FALSE")
-    protected Integer true_false;
-
-    public void setTrue_false(True_false true_false) {
-        this.true_false = true_false == null ? null : true_false.getId();
-    }
-
-    public True_false getTrue_false() {
-        return true_false == null ? null : True_false.fromId(true_false);
-    }
-
 
     public void setAnswer(String answer) {
         this.answer = answer;
